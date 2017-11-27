@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Data">
+  <DataContextMoniker Name="/DataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d9b4da1e-71f0-4f8c-bedf-3a6a686ef416" absoluteBounds="1.875, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataDataContext/SanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c450923-7a73-4258-b852-b381123d247e" absoluteBounds="1.8900000000000001, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63e81ed2-5ddb-4320-8be0-714db7743b3c" absoluteBounds="4.875, 1.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataDataContext/NSX" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb4f22ad-09ab-4c2f-bcae-44d04438772e" absoluteBounds="4.89, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.875 : 1.63064697265625); (3.875 : 1.63064697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataDataContext/NSX/NSX_SanPham" />
+      <nodes>
+        <classShapeMoniker Id="63e81ed2-5ddb-4320-8be0-714db7743b3c" />
+        <classShapeMoniker Id="d9b4da1e-71f0-4f8c-bedf-3a6a686ef416" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

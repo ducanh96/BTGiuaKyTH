@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BTLTTH" Class="DataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-ET1GGIC\SQLEXPRESS;Initial Catalog=BTLTTH;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BTLTTHConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SanPham" Member="SanPhams">
+    <Type Name="SanPham">
+      <Column Name="MaSp" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenSp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDLoaiSp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NSX_SanPham" Member="NSX" ThisKey="IDLoaiSp" OtherKey="Id" Type="NSX" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NSX" Member="NSXes">
+    <Type Name="NSX">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenNSX" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="NSX_SanPham" Member="SanPhams" ThisKey="Id" OtherKey="IDLoaiSp" Type="SanPham" />
+    </Type>
+  </Table>
+</Database>
